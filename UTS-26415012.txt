@@ -1,0 +1,14 @@
+no 1
+wget -O API_SI.POV.GINI_DS2_en_csv_v2.zip http://api.worldbank.org/v2/en/indicator/SI.POV.GINI?downloadformat=csv 
+unzip API_SI.POV.GINI_DS2_en_csv_v2.zip 
+head -1 a.txt | sed 's/[^,]//g' | wc -c 
+sed 's/""/,,/,/g' API_SI.POV.GINI_DS2_en_csv_v2.csv > newzip1.csv
+	cat newzip1.csv
+	
+	sed 's/,"",/,/g' Metadata_Country_API_SI.POV.GINI_DS2_en_csv_v2.csv > newzip2.csv
+	cat newzip2.csv
+	
+	sed 's/,"",/,/g' Metadata_Indicator_API_SI.POV.GINI_DS2_en_csv_v2.csv > newzip3.csv
+	cat newzip3.csv 
+no 2
+curl https://aplikasi.pertanian.go.id/smshargakab/lhk03prov.asp
