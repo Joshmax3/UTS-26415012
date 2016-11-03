@@ -1,0 +1,5 @@
+curl https://aplikasi.pertanian.go.id/smshargakab/qrylapharprov.asp
+
+crontab -e 
+0 * * * *
+
